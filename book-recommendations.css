@@ -1,0 +1,162 @@
+/* book-recommendations.css - стилі для карток книг */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #555;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header {
+    background-color: #333;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.nav-link:hover {
+    background-color: #707070;
+    transform: translateY(-2px);
+}
+
+main {
+    padding: 40px 0;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 40px;
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+/* ГРИД КАРТОК КНИГ */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.book-card {
+    background: #444;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.book-cover {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-bottom: 3px solid #707070;
+}
+
+.book-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.book-author {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.book-description {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ddd;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.btn-details {
+    background-color: #707070;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-details:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #ccc;
+}
